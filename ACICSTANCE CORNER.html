@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website With Login & Registration | Codehal</title>
+    <body>
+        <div class="wrapper">
+            <!-- Add your logo here -->
+            <img src="https://raw.githubusercontent.com/liz173/ACICSTANCE-CORNER/6be0ed6a7724f229594747be08e1d2871bbe6fe6/acicstance%20logo.png" alt="Logo" style="width: 100px; margin-bottom: 20px;">
+    
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
                 
@@ -209,3 +221,164 @@
                     z-index: -2; /* Keep overlay behind the content */
                 }
                 </style>
+            
+        </head>
+        <body>
+    <div class="wrapper">
+        <!-- Login Form -->
+        <div id="login-form" class="form-container active">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" onclick="togglePasswordVisibility('password')"> 
+                        <label>Show Password</label>
+                    </div>
+                </div>
+                <button type="submit">Login</button>
+                <p id="error-message"></p>
+            </form>
+            <p>Don't have an account? <a href="#" class="register-link">Register here</a></p>
+            <p><a href="#" id="forgot-password-link">Forgot Password?</a></p>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div id="forgot-password-form" class="form-container">
+            <h2>Forgot Password</h2>
+            <form id="forgotPasswordForm">
+                <div class="input-group">
+                    <label for="forgot-email">Email</label>
+                    <input type="email" id="forgot-email" name="forgot-email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="new-password" placeholder="New Password" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" onclick="togglePasswordVisibility('new-password')"> 
+                        <label>Show Password</label>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+                <p id="forgot-password-error-message"></p>
+            </form>
+            <p>Remembered your password? <a href="#" class="login-link">Login here</a></p>
+        </div>
+
+<!-- Registration Form -->
+        <div id="register-form" class="form-container">
+            <h2>Create Account</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="reg-name">Full Name</label>
+                    <input type="text" id="reg-name" name="reg-name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="reg-email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="reg-password" placeholder="Password" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" onclick="togglePasswordVisibility('reg-password')"> 
+                        <label>Show Password</label>
+                    </div>
+                </div>
+                <button type="submit">Register</button>
+                <p id="register-error-message"></p>
+            </form>
+            <p>Already have an account? <a href="#" class="login-link">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+        const loginLink = document.querySelectorAll('.login-link');
+        const registerLink = document.querySelector('.register-link');
+        const forgotPasswordLink = document.getElementById('forgot-password-link');
+
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const forgotPasswordForm = document.getElementById('forgot-password-form');
+
+        let registeredEmail = null;
+        let registeredPassword = null;
+
+        loginLink.forEach(link => {
+            link.addEventListener('click', () => {
+                loginForm.classList.add('active');
+                registerForm.classList.remove('active');
+                forgotPasswordForm.classList.remove('active');
+            });
+        });
+
+        registerLink.addEventListener('click', () => {
+            registerForm.classList.add('active');
+            loginForm.classList.remove('active');
+            forgotPasswordForm.classList.remove('active');
+        });
+
+        forgotPasswordLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            forgotPasswordForm.classList.add('active');
+            loginForm.classList.remove('active');
+            registerForm.classList.remove('active');
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+
+            if (email && password) {
+                registeredEmail = email;
+                registeredPassword = password;
+                alert('Registration successful');
+                registerForm.classList.remove('active');
+                loginForm.classList.add('active');
+            } else {
+                document.getElementById('register-error-message').textContent = 'All fields are required';
+            }
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === registeredEmail && password === registeredPassword) {
+                alert('Login successful');
+                loginForm.classList.remove('active');
+            } else {
+                document.getElementById('error-message').textContent = 'Incorrect email or password';
+            }
+        });
+        
+        document.getElementById('forgotPasswordForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('forgot-email').value;
+            const newPassword = document.getElementById('new-password').value;
+
+            if (email === registeredEmail) {
+                registeredPassword = newPassword;
+                alert('Password reset successful');
+                forgotPasswordForm.classList.remove('active');
+                loginForm.classList.add('active');
+            } else {
+                document.getElementById('forgot-password-error-message').textContent = 'Email not found';
+            }
+        });
+
+        function togglePasswordVisibility(id) {
+            const passwordField = document.getElementById(id);
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+        }
+    </script>
+</body>
+</html>
