@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizette Macalindol - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #3a3a7e, #7072f8);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ffd700;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+        .cta-button {
+            margin-top: 30px;
+            background-color: #ffd700;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #3a3a7e;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #ffcc33;
+        }
+        .about {
+            padding: 80px 50px;
+            text-align: center;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .about p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .featured-stories {
+            padding: 80px 50px;
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .story {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .story:hover {
+            transform: translateY(-10px);
+        }
+        .story img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .story h3 {
+            padding: 20px;
+            font-size: 1.5rem;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h1>Lizette Macalindol</h1>
+        <div>
+            <a href="#about">About</a>
+            <a href="#stories">Stories</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Creative World</h1>
+        <p>Dive into a collection of stories and adventures crafted with passion.</p>
+        <button class="cta-button" onclick="window.location.href='#stories'">Explore My Library</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm Lizette Macalindol, a passionate writer and developer. I find inspiration in Seventeen, horror movies, and music, which fuels my creativity in storytelling.
+        </p>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section id="stories" class="featured-stories">
+        <h2>Featured Stories</h2>
+        <div class="story-grid">
+            <div class="story">
+                <img src="https://via.placeholder.com/300x200" alt="Story Cover">
+                <h3>Ghosted but Not Gone</h3>
+            </div>
+            <div class="story">
+                <img src="https://via.placeholder.com/300x200" alt="Story Cover">
+                <h3>The Childhood Promise</h3>
+            </div>
+            <div class="story">
+                <img src="https://via.placeholder.com/300x200" alt="Story Cover">
+                <h3>Si Nikolai na Walang Pake Sayo, Until...</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lizette Macalindol. All rights reserved.</p>
+        <p>Follow me on social media for more updates!</p>
+    </footer>
+
+</body>
+</html>
