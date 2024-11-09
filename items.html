@@ -67,12 +67,6 @@
         button:hover {
             background-color: #003f63;
         }
-        .availability-info {
-            font-size: 14px;
-            color: #555;
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
         .request-summary {
             margin-top: 20px;
             padding: 15px;
@@ -80,6 +74,15 @@
             border: 1px solid #b0e0ef;
             border-radius: 5px;
             display: none;
+            font-size: 14px;
+            color: #055a8c;
+        }
+        .availability {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f1f8ff;
+            border: 1px solid #b0e0ef;
+            border-radius: 5px;
             font-size: 14px;
             color: #055a8c;
         }
@@ -103,13 +106,17 @@
                 <option value="Tablet">Tablet</option>
                 <option value="Camera">Camera</option>
             </select>
-            <div id="availability" class="availability-info"></div>
         </div>
 
         <!-- Quantity Input -->
         <div class="input-group">
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" min="1" placeholder="Enter quantity" required>
+            <input type="number" id="quantity" min="1" max="10" placeholder="Enter quantity" required>
+        </div>
+
+        <!-- Item Availability Info -->
+        <div id="availability" class="availability" style="display: none;">
+            <p>Available stock: <span id="stock-quantity">0</span> items</p>
         </div>
 
         <!-- Request Button -->
@@ -123,45 +130,47 @@
     </div>
 
     <script>
-        // Initial stock for each item
-        const stock = {
+        // Stock data for items
+        const itemStock = {
             "Laptop": 5,
-            "Projector": 2,
-            "Tablet": 10,
-            "Camera": 3
+            "Projector": 3,
+            "Tablet": 8,
+            "Camera": 2
         };
 
-        // Update availability display based on selected item
         function updateAvailability() {
             const item = document.getElementById("item").value;
-            const availability = document.getElementById("availability");
-            if (item && stock[item] !== undefined) {
-                availability.textContent = `${stock[item]} ${item}(s) available`;
-                document.getElementById("quantity").max = stock[item]; // Limit quantity to available stock
+            const availabilitySection = document.getElementById("availability");
+            const stockQuantity = document.getElementById("stock-quantity");
+
+            if (item) {
+                // Show available stock based on selected item
+                availabilitySection.style.display = "block";
+                stockQuantity.textContent = itemStock[item];
             } else {
-                availability.textContent = "";
+                availabilitySection.style.display = "none";
             }
         }
 
-        // Handle the request submission
         function submitRequest() {
             const item = document.getElementById("item").value;
-            const quantity = parseInt(document.getElementById("quantity").value, 10);
+            const quantity = parseInt(document.getElementById("quantity").value);
             const summaryText = document.getElementById("summary-text");
             const requestSummary = document.getElementById("request-summary");
+            const availableStock = itemStock[item] || 0;
 
-            if (item && quantity && quantity <= stock[item]) {
-                // Deduct requested quantity from stock
-                stock[item] -= quantity;
-                summaryText.textContent = `You have requested to borrow ${quantity} ${item}(s).`;
-                requestSummary.style.display = "block";
-                
-                // Update availability information after request
-                updateAvailability();
-            } else if (!item || !quantity) {
-                alert("Please select an item and specify the quantity.");
+            if (item && quantity) {
+                if (quantity <= availableStock) {
+                    summaryText.textContent = `You have requested to borrow ${quantity} ${item}(s).`;
+                    requestSummary.style.display = "block";
+                    // Update stock after request (decrease by quantity)
+                    itemStock[item] -= quantity;
+                    updateAvailability(); // Update availability after borrowing
+                } else {
+                    alert(`Sorry, we only have ${availableStock} ${item}(s) available.`);
+                }
             } else {
-                alert("Requested quantity exceeds available stock.");
+                alert("Please select an item and specify the quantity.");
             }
         }
     </script>
