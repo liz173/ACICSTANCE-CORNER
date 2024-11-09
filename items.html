@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Items | YourWebsite</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f4f8;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #055a8c;
+            margin-bottom: 10px;
+        }
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #055a8c;
+        }
+        select, input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #055a8c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #003f63;
+        }
+        .availability-info {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .request-summary {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e0f4f9;
+            border: 1px solid #b0e0ef;
+            border-radius: 5px;
+            display: none;
+            font-size: 14px;
+            color: #055a8c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://raw.githubusercontent.com/liz173/ACICSTANCE-CORNER/6be0ed6a7724f229594747be08e1d2871bbe6fe6/acicstance%20logo.png" alt="Logo">
+            <h1>Borrow Items</h1>
+            <p>Select an item and the quantity you'd like to borrow</p>
+        </div>
+
+        <!-- Item Selection -->
+        <div class="input-group">
+            <label for="item">Choose an Item:</label>
+            <select id="item" onchange="updateAvailability()" required>
+                <option value="" disabled selected>Select an item</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Projector">Projector</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Camera">Camera</option>
+            </select>
+            <div id="availability" class="availability-info"></div>
+        </div>
+
+        <!-- Quantity Input -->
+        <div class="input-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" placeholder="Enter quantity" required>
+        </div>
+
+        <!-- Request Button -->
+        <button onclick="submitRequest()">Request Item</button>
+
+        <!-- Request Summary -->
+        <div id="request-summary" class="request-summary">
+            <p><strong>Request Summary:</strong></p>
+            <p id="summary-text"></p>
+        </div>
+    </div>
+
+    <script>
+        // Initial stock for each item
+        const stock = {
+            "Laptop": 5,
+            "Projector": 2,
+            "Tablet": 10,
+            "Camera": 3
+        };
+
+        // Update availability display based on selected item
+        function updateAvailability() {
+            const item = document.getElementById("item").value;
+            const availability = document.getElementById("availability");
+            if (item && stock[item] !== undefined) {
+                availability.textContent = `${stock[item]} ${item}(s) available`;
+                document.getElementById("quantity").max = stock[item]; // Limit quantity to available stock
+            } else {
+                availability.textContent = "";
+            }
+        }
+
+        // Handle the request submission
+        function submitRequest() {
+            const item = document.getElementById("item").value;
+            const quantity = parseInt(document.getElementById("quantity").value, 10);
+            const summaryText = document.getElementById("summary-text");
+            const requestSummary = document.getElementById("request-summary");
+
+            if (item && quantity && quantity <= stock[item]) {
+                // Deduct requested quantity from stock
+                stock[item] -= quantity;
+                summaryText.textContent = `You have requested to borrow ${quantity} ${item}(s).`;
+                requestSummary.style.display = "block";
+                
+                // Update availability information after request
+                updateAvailability();
+            } else if (!item || !quantity) {
+                alert("Please select an item and specify the quantity.");
+            } else {
+                alert("Requested quantity exceeds available stock.");
+            }
+        }
+    </script>
+</body>
+</html>
