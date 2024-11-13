@@ -289,27 +289,28 @@
     <section id="subjects" class="subjects">
         <h2 class="heading">Our Services</h2>
         <div class="box-container">
-            <div class="box">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW5lonyVf9TYHe_E9mMslsH6Nb8_axAWptGcb0brlzGTk7ag/viewform" class="box">
                 <div class="box-content">
                     <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.15752-9/463199147_1257441035381315_3198867836608332682_n.jpg" alt="Printing Services">
                     <p>Printing Services</p>
                 </div>
-            </div>
-            <div class="box">
+            </a>
+            <a href="sports_materials.html" class="box">
                 <div class="box-content">
                     <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/462537598_1059947298955900_4448114609466627873_n.jpg" alt="Sports Materials">
                     <p>Sports Materials</p>
                 </div>
-            </div>
-            <div class="box">
+            </a>
+            <a href="school_supplies.html" class="box">
                 <div class="box-content">
                     <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/462539882_910396477314635_946999577382875180_n.jpg" alt="School Supplies">
                     <p>School Supplies</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
-
+    
+    
     <!-- Feedback Section -->
     <style>
         .feedback-form {
