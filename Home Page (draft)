@@ -311,21 +311,90 @@
     </section>
 
     <!-- Feedback Section -->
-    <section class="feedback-section" id="feedback">
-        <h2>We Value Your Feedback</h2>
-        <div class="star-rating">
-            <span class="star" onclick="rate(1)">&#9733;</span>
-            <span class="star" onclick="rate(2)">&#9733;</span>
-            <span class="star" onclick="rate(3)">&#9733;</span>
-            <span class="star" onclick="rate(4)">&#9733;</span>
-            <span class="star" onclick="rate(5)">&#9733;</span>
-        </div>
-        <div class="feedback-form">
-            <textarea id="feedbackComment" placeholder="Leave your comments here..."></textarea>
-            <button onclick="submitFeedback()">Submit Feedback</button>
-            <div id="confirmationMessage" class="confirmation"></div>
-        </div>
-    </section>
+    <style>
+        .feedback-form {
+            text-align: center;
+        }
+    
+        .feedback-form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            margin: 15px 0;
+            height: 120px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+        }
+    
+        .feedback-form button {
+            padding: 12px 25px;
+            background-color: #2f82e7;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 10px;
+        }
+
+            .feedback-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .feedback-form textarea {
+                width: 100%;
+                max-width: 600px;
+                padding: 15px;
+                margin: 15px 0;
+                height: 120px;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+                font-size: 1rem;
+                resize: none; /* Prevent resizing */
+            }
+            
+        
+            .feedback-form button {
+                padding: 12px 25px;
+                background-color: #2f82e7;
+                color: white;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s, transform 0.3s;
+                margin-top: 10px;
+            }
+        
+            .feedback-form button:hover {
+                background-color: #3fb8f0;
+                transform: translateY(-3px);
+            }
+        </style>
+        
+        <section class="feedback-section" id="feedback">
+            <h2>We Value Your Feedback</h2>
+            <div class="star-rating">
+                <span class="star" onclick="rate(1)">&#9733;</span>
+                <span class="star" onclick="rate(2)">&#9733;</span>
+                <span class="star" onclick="rate(3)">&#9733;</span>
+                <span class="star" onclick="rate(4)">&#9733;</span>
+                <span class="star" onclick="rate(5)">&#9733;</span>
+            </div>
+            <div class="feedback-form">
+                <textarea id="feedbackComment" placeholder="Leave your comments here..."></textarea>
+                <button onclick="submitFeedback()">Submit Feedback</button>
+                <div id="confirmationMessage" class="confirmation"></div>
+            </div>
+        </section>
+        
+
 
     <!-- Back to Top Button -->
     <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
