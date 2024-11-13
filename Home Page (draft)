@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lizette Macalindol - Home</title>
+    <title>ACICSTANCE CORNER - Home</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #3a3a7e, #7072f8);
+            background: linear-gradient(135deg, #4d99d3, #dedeeddc);
             color: #fff;
             overflow-x: hidden;
         }
@@ -33,7 +33,7 @@
             transition: color 0.3s;
         }
         .navbar a:hover {
-            color: #ffd700;
+            color: #006eff;
         }
         .hero {
             height: 100vh;
@@ -54,17 +54,17 @@
         }
         .cta-button {
             margin-top: 30px;
-            background-color: #ffd700;
+            background-color: #2f82e7;
             border: none;
             padding: 15px 30px;
             font-size: 1rem;
-            color: #3a3a7e;
+            color: #ffffff;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         .cta-button:hover {
-            background-color: #ffcc33;
+            background-color: #3fb8f0;
         }
         .about {
             padding: 80px 50px;
@@ -78,32 +78,58 @@
             max-width: 700px;
             margin: 0 auto;
         }
-        .featured-stories {
+        .subjects {
             padding: 80px 50px;
-        }
-        .story-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .story {
+            text-align: center;
             background-color: rgba(0, 0, 0, 0.6);
+        }
+        .subjects .heading {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2fb7f6;
+        }
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 10px;
+        }
+        .box {
+            background-color: rgb(38, 172, 225);
             border-radius: 10px;
-            overflow: hidden;
-            cursor: pointer;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
             transition: transform 0.3s;
         }
-        .story:hover {
+        .box:hover {
             transform: translateY(-10px);
         }
-        .story img {
+        .box img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
+            border-radius: 5px;
         }
-        .story h3 {
-            padding: 20px;
+        .box-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .box h3 {
             font-size: 1.5rem;
+            margin: 15px 0 10px;
+        }
+        .box p {
+            font-size: 1rem;
+            margin-top: auto;
+            font-weight: bold;
+            text-transform: capitalize;
         }
         footer {
             background: rgba(0, 0, 0, 0.8);
@@ -114,59 +140,147 @@
         footer p {
             font-size: 0.9rem;
         }
+        /* Button for Back to Top */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #2f82e7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <div class="navbar">
-        <h1>Lizette Macalindol</h1>
+        <h1>ACICSTANCE CORNER</h1>
         <div>
             <a href="#about">About</a>
-            <a href="#stories">Stories</a>
+            <a href="#subjects">Services</a>
             <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to My Creative World</h1>
-        <p>Dive into a collection of stories and adventures crafted with passion.</p>
-        <button class="cta-button" onclick="window.location.href='#stories'">Explore My Library</button>
+        <h1>Welcome to Student ACICSTANCE Corner</h1>
+        <p>Here to assist you! 
+            As part of our commitment to support fellow students in their ever-upward excellence, 
+            the College of Informatics and Computing Sciences Alangilan Student Council is proud to offer a range of free 
+            services at our ACICSTANCE CORNER for all the CICS Students.</p>
+        <button class="cta-button" onclick="window.location.href='#subjects'">To Explore</button>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            Hi, I'm Lizette Macalindol, a passionate writer and developer. I find inspiration in Seventeen, horror movies, and music, which fuels my creativity in storytelling.
-        </p>
-    </section>
-
-    <!-- Featured Stories Section -->
-    <section id="stories" class="featured-stories">
-        <h2>Featured Stories</h2>
-        <div class="story-grid">
-            <div class="story">
-                <img src="https://via.placeholder.com/300x200" alt="Story Cover">
-                <h3>Ghosted but Not Gone</h3>
+    <!-- Featured Subjects Section -->
+    <section id="subjects" class="subjects">
+        <h2 class="heading">Our Services</h2>
+        <div class="box-container">
+            <div class="box">
+                <div class="box-content">
+                    <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.15752-9/463199147_1257441035381315_3198867836608332682_n.jpg" alt="Printing Services">
+                    <p>Printing Services</p>
+                </div>
             </div>
-            <div class="story">
-                <img src="https://via.placeholder.com/300x200" alt="Story Cover">
-                <h3>The Childhood Promise</h3>
+            <div class="box">
+                <div class="box-content">
+                    <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/462537598_1059947298955900_4448114609466627873_n.jpg" alt="Sports Materials">
+                    <p>Sports Materials</p>
+                </div>
             </div>
-            <div class="story">
-                <img src="https://via.placeholder.com/300x200" alt="Story Cover">
-                <h3>Si Nikolai na Walang Pake Sayo, Until...</h3>
+            <div class="box">
+                <div class="box-content">
+                    <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/462539882_910396477314635_946999577382875180_n.jpg" alt="School Supplies">
+                    <p>School Supplies</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Form Section -->
+    <section id="contact" style="padding: 80px 50px; text-align: center;">
+        <h2>Contact Us</h2>
+        <form style="max-width: 600px; margin: 0 auto;">
+            <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin: 10px 0;">
+            <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin: 10px 0;">
+            <textarea name="message" placeholder="Your Message" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
+            <button type="submit" style="padding: 10px 20px; background-color: #2f82e7; color: white; border: none; cursor: pointer;">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="padding: 80px 50px; text-align: center;">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <h3 style="margin-bottom: 10px;">What services do you provide?</h3>
+            <p>We offer a variety of services including printing, sports materials, and school supplies for CICS students.</p>
+
+            <h3 style="margin-bottom: 10px;">Where can I find ACICSTANCE CORNER?</h3>
+            <p>We are located in the College of Informatics and Computing Sciences building, Alangilan.</p>
+
+            <h3 style="margin-bottom: 10px;">How do I request a service?</h3>
+            <p>You can visit our office or contact us through the form above for specific service inquiries.</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section id="newsletter" style="padding: 80px 50px; text-align: center; background-color: rgba(0, 0, 0, 0.6);">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form style="max-width: 600px; margin: 0 auto;">
+            <input type="email" placeholder="Enter your email" required style="width: 100%; padding: 10px; margin: 10px 0;">
+            <button type="submit" style="padding: 10px 20px; background-color: #2f82e7; color: white; border: none; cursor: pointer;">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="padding: 80px 50px; text-align: center;">
+        <h2>What Our Students Say</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 20px;">
+            <div style="background-color: #2f82e7; padding: 20px; border-radius: 5px; color: white;">
+                <p>"ACICSTANCE Corner is a lifesaver during exams! The printing service is so convenient."</p>
+                <p>- John D.</p>
+            </div>
+            <div style="background-color: #2f82e7; padding: 20px; border-radius: 5px; color: white;">
+                <p>"Great resource for getting sports materials. The staff is very helpful."</p>
+                <p>- Maria P.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Lizette Macalindol. All rights reserved.</p>
-        <p>Follow me on social media for more updates!</p>
+        <p>&copy; 2024 ACICSTANCE CORNER. All rights reserved.</p>
+        <div style="margin-top: 20px;">
+            <a href="https://facebook.com" target="_blank" style="margin: 0 10px; color: #fff;">Facebook</a>
+            <a href="https://twitter.com" target="_blank" style="margin: 0 10px; color: #fff;">Twitter</a>
+            <a href="https://instagram.com" target="_blank" style="margin: 0 10px; color: #fff;">Instagram</a>
+        </div>
     </footer>
 
+    <script>
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/Hide "Back to Top" button
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
