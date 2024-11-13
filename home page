@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizette Macalindol - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #4d99d3, #dedeeddc);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #006eff;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+        .cta-button {
+            margin-top: 30px;
+            background-color: #2f82e7;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #3fb8f0;
+        }
+        .about {
+            padding: 80px 50px;
+            text-align: center;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .about p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .subjects {
+            padding: 80px 50px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .subjects .heading {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2fb7f6;
+        }
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 10px;
+        }
+        .box {
+            background-color: rgb(38, 172, 225);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+            transition: transform 0.3s;
+        }
+        .box:hover {
+            transform: translateY(-10px);
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .box-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .box h3 {
+            font-size: 1.5rem;
+            margin: 15px 0 10px;
+        }
+        .box p {
+            font-size: 1rem;
+            margin-top: auto;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h1>ACICSTANCE CORNER</h1>
+        <div>
+            <a href="#about">About</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Student ACICSTANCE Corner</h1>
+        <p>Here to assist you! 
+            As part of our commitment to support fellow students in their ever-upward excellence, 
+            the College of Informatics and Computing Sciences Alangilan Student Council is proud to offer a range of free 
+            services at our ACICSTANCE CORNER for all the CICS Students.</p>
+        <button class="cta-button" onclick="window.location.href='#subjects'">To Explore</button>
+    </section>
+
+    <!-- Featured Subjects Section -->
+    <section id="subjects" class="subjects">
+        <div class="box-container">
+            <div class="box">
+                <div class="box-content">
+                    <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.15752-9/463199147_1257441035381315_3198867836608332682_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=veRglwwYdgUQ7kNvgHU4l5J&_nc_zt=23&_nc_ht=scontent.fmnl13-2.fna&oh=03_Q7cD1QHtrRvuSwg9rpXEWfb9k7EzfmrFG9m8I5Nk7OZL7EOK9w&oe=6756D6D1" alt="Computer Subject">
+                    <p>Computer Science</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content">
+                    <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/462537598_1059947298955900_4448114609466627873_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=gX_ERY0EUqoQ7kNvgH72Qxe&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&oh=03_Q7cD1QFp-FuRu_Jsgfw7EvSHLQRu_CoiI5Qh9BbY7LmApdvGNA&oe=6756E02D" alt="Mathematics Subject">
+                    <p>Mathematics</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content">
+                    <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/462539882_910396477314635_946999577382875180_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=SE9ifVa2otcQ7kNvgHQtL7e&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&oh=03_Q7cD1QG6AtSjOwVw8gg797e2BuBKv1vcKxATwCw0yiWyQUooNg&oe=6756D79B" alt="Graphic Designing Subject">
+                    <p>Graphic Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ACICSTANCE CORNER. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
