@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACICSTANCE CORNER - Home</title>
     <style>
+        /* General Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
             background: linear-gradient(135deg, #4d99d3, #dedeeddc);
             color: #fff;
             overflow-x: hidden;
         }
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -25,16 +29,20 @@
             width: 100%;
             top: 0;
             background: rgba(0, 0, 0, 0.7);
+            z-index: 10;
         }
+
         .navbar a {
             text-decoration: none;
             color: #fff;
             margin-left: 20px;
             transition: color 0.3s;
         }
+
         .navbar a:hover {
             color: #006eff;
         }
+
         .hero {
             height: 100vh;
             display: flex;
@@ -44,14 +52,17 @@
             text-align: center;
             padding: 0 20px;
         }
+
         .hero h1 {
             font-size: 3rem;
         }
+
         .hero p {
             margin-top: 20px;
             font-size: 1.2rem;
             max-width: 600px;
         }
+
         .cta-button {
             margin-top: 30px;
             background-color: #2f82e7;
@@ -63,37 +74,45 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .cta-button:hover {
             background-color: #3fb8f0;
         }
+
         .about {
             padding: 80px 50px;
             text-align: center;
         }
+
         .about h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
+
         .about p {
             max-width: 700px;
             margin: 0 auto;
         }
+
         .subjects {
             padding: 80px 50px;
             text-align: center;
             background-color: rgba(0, 0, 0, 0.6);
         }
+
         .subjects .heading {
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #2fb7f6;
         }
+
         .box-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 25px;
             margin-top: 10px;
         }
+
         .box {
             background-color: rgb(38, 172, 225);
             border-radius: 10px;
@@ -106,40 +125,106 @@
             height: 300px;
             transition: transform 0.3s;
         }
+
         .box:hover {
             transform: translateY(-10px);
         }
+
         .box img {
             width: 100%;
             height: 180px;
             object-fit: cover;
             border-radius: 5px;
         }
+
         .box-content {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
         }
+
         .box h3 {
             font-size: 1.5rem;
             margin: 15px 0 10px;
         }
+
         .box p {
             font-size: 1rem;
             margin-top: auto;
             font-weight: bold;
             text-transform: capitalize;
         }
+
         footer {
             background: rgba(0, 0, 0, 0.8);
             text-align: center;
             padding: 30px 0;
             margin-top: 50px;
         }
+
         footer p {
             font-size: 0.9rem;
         }
+
+        /* Feedback Section */
+        .feedback-section {
+            padding: 80px 50px;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .feedback-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2f82e7;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .star {
+            font-size: 2rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .star.selected,
+        .star:hover,
+        .star:hover ~ .star {
+            color: #FFD700;
+        }
+
+        .feedback-form {
+            margin-top: 20px;
+        }
+
+        .feedback-form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            margin: 10px 0;
+            height: 100px;
+        }
+
+        .feedback-form button {
+            padding: 10px 20px;
+            background-color: #2f82e7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .feedback-form button:hover {
+            background-color: #3fb8f0;
+        }
+
         /* Button for Back to Top */
         #backToTop {
             position: fixed;
@@ -153,18 +238,25 @@
             cursor: pointer;
             display: none;
         }
+
+        /* Submission Confirmation */
+        .confirmation {
+            margin-top: 20px;
+            color: green;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
-<body>
 
+<body>
     <!-- Navigation Bar -->
     <div class="navbar">
         <h1>ACICSTANCE CORNER</h1>
         <div>
             <a href="#about">About</a>
             <a href="#subjects">Services</a>
+            <a href="#feedback">Feedback</a>
             <a href="#contact">Contact</a>
-            <a href="#faq">FAQ</a>
         </div>
     </div>
 
@@ -178,7 +270,7 @@
         <button class="cta-button" onclick="window.location.href='#subjects'">To Explore</button>
     </section>
 
-    <!-- Featured Subjects Section -->
+    <!-- Services Section -->
     <section id="subjects" class="subjects">
         <h2 class="heading">Our Services</h2>
         <div class="box-container">
@@ -203,53 +295,20 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact" style="padding: 80px 50px; text-align: center;">
-        <h2>Contact Us</h2>
-        <form style="max-width: 600px; margin: 0 auto;">
-            <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin: 10px 0;">
-            <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin: 10px 0;">
-            <textarea name="message" placeholder="Your Message" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
-            <button type="submit" style="padding: 10px 20px; background-color: #2f82e7; color: white; border: none; cursor: pointer;">Send Message</button>
-        </form>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" style="padding: 80px 50px; text-align: center;">
-        <h2>Frequently Asked Questions</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-            <h3 style="margin-bottom: 10px;">What services do you provide?</h3>
-            <p>We offer a variety of services including printing, sports materials, and school supplies for CICS students.</p>
-
-            <h3 style="margin-bottom: 10px;">Where can I find ACICSTANCE CORNER?</h3>
-            <p>We are located in the College of Informatics and Computing Sciences building, Alangilan.</p>
-
-            <h3 style="margin-bottom: 10px;">How do I request a service?</h3>
-            <p>You can visit our office or contact us through the form above for specific service inquiries.</p>
+    <!-- Feedback Section -->
+    <section class="feedback-section" id="feedback">
+        <h2>We Value Your Feedback</h2>
+        <div class="star-rating">
+            <span class="star" onclick="rate(1)">&#9733;</span>
+            <span class="star" onclick="rate(2)">&#9733;</span>
+            <span class="star" onclick="rate(3)">&#9733;</span>
+            <span class="star" onclick="rate(4)">&#9733;</span>
+            <span class="star" onclick="rate(5)">&#9733;</span>
         </div>
-    </section>
-
-    <!-- Newsletter Subscription Section -->
-    <section id="newsletter" style="padding: 80px 50px; text-align: center; background-color: rgba(0, 0, 0, 0.6);">
-        <h2>Subscribe to Our Newsletter</h2>
-        <form style="max-width: 600px; margin: 0 auto;">
-            <input type="email" placeholder="Enter your email" required style="width: 100%; padding: 10px; margin: 10px 0;">
-            <button type="submit" style="padding: 10px 20px; background-color: #2f82e7; color: white; border: none; cursor: pointer;">Subscribe</button>
-        </form>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" style="padding: 80px 50px; text-align: center;">
-        <h2>What Our Students Say</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 20px;">
-            <div style="background-color: #2f82e7; padding: 20px; border-radius: 5px; color: white;">
-                <p>"ACICSTANCE Corner is a lifesaver during exams! The printing service is so convenient."</p>
-                <p>- John D.</p>
-            </div>
-            <div style="background-color: #2f82e7; padding: 20px; border-radius: 5px; color: white;">
-                <p>"Great resource for getting sports materials. The staff is very helpful."</p>
-                <p>- Maria P.</p>
-            </div>
+        <div class="feedback-form">
+            <textarea id="feedbackComment" placeholder="Leave your comments here..."></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+            <div id="confirmationMessage" class="confirmation"></div>
         </div>
     </section>
 
@@ -281,6 +340,43 @@
                 backToTopButton.style.display = "none";
             }
         };
+
+        // Star Rating Logic
+        let selectedRating = 0;
+        function rate(starNumber) {
+            selectedRating = starNumber;
+            const stars = document.querySelectorAll('.star');
+            stars.forEach((star, index) => {
+                if (index < starNumber) {
+                    star.classList.add('selected');
+                } else {
+                    star.classList.remove('selected');
+                }
+            });
+        }
+
+        // Feedback Form Submission
+        function submitFeedback() {
+            const comment = document.getElementById('feedbackComment').value;
+
+            if (selectedRating === 0) {
+                alert('Please select a star rating before submitting!');
+                return;
+            }
+
+            // Here you would handle the form submission, like sending data to a server
+            console.log('Feedback submitted:', { rating: selectedRating, comment });
+
+            // Show confirmation message
+            document.getElementById('confirmationMessage').textContent = 'Thank you for your feedback!';
+            
+            // Reset form and rating
+            document.getElementById('feedbackComment').value = '';
+            selectedRating = 0;
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => star.classList.remove('selected'));
+        }
     </script>
 </body>
+
 </html>
