@@ -46,46 +46,71 @@
             color: #00aaff;
         }
 
+        /* Hero Section Enhancements */
         .hero {
+            position: relative;
             height: 100vh;
+            background: url('your-background-image.jpg') no-repeat center center/cover; /* Add a background image for a professional look */
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+            display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
         }
 
         .hero p {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            max-width: 700px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .cta-button {
-            margin-top: 30px;
             background-color: #2f82e7;
             border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
+            padding: 15px 40px;
+            font-size: 1.2rem;
             color: #ffffff;
-            border-radius: 25px;
+            border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s, transform 0.3s;
         }
 
         .cta-button:hover {
-            background-color: #3fb8f0;
+            background-color: #ff7043;
             transform: translateY(-5px);
         }
+
 
         .about {
             padding: 80px 50px;
@@ -102,6 +127,69 @@
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
+        }
+
+        .officers {
+            padding: 80px 50px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-top: 50px;
+        }
+
+        .officers h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: #2fb7f6;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .officers .officer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .officer {
+            background-color: #26ace1;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .officer:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .officer img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .officer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .officer p {
+            font-size: 1rem;
         }
 
         .subjects {
@@ -261,6 +349,7 @@
             transform: translateY(-5px);
         }
     </style>
+    </style>
 </head>
 
 <body>
@@ -269,21 +358,91 @@
         <h1>ACICSTANCE CORNER</h1>
         <div>
             <a href="#about">About</a>
+            <a href="#officers">Officers</a>
             <a href="#subjects">Services</a>
             <a href="#feedback">Feedback</a>
-            <!-- Dark Mode Toggle Button -->
-        <button id="darkModeToggle" class="toggle-btn">🌙</button>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Student ACICSTANCE Corner</h1>
-        <p>Here to assist you! 
-            As part of our commitment to support fellow students in their ever-upward excellence, 
-            the College of Informatics and Computing Sciences Alangilan Student Council is proud to offer a range of free 
-            services at our ACICSTANCE CORNER for all the CICS Students.</p>
-        <button class="cta-button" onclick="window.location.href='#subjects'">To Explore</button>
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Welcome to the ACICSTANCE Corner!</h1>
+            <p>
+                Your one-stop destination for student support and resources. The College of Informatics and Computing Sciences Alangilan Student Council is dedicated to helping fellow students achieve academic and personal excellence. Explore our range of free services tailored specifically for CICS students!
+            </p>
+            <button class="cta-button" onclick="window.location.href='#subjects'">Explore Our Services</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Officers Section -->
+    <section id="officers" class="officers">
+        <h2>Meet Our Officers</h2>
+        <div class="officer-container">
+            <div class="officer">
+                <img src="officer1.jpg" alt="Officer 1">
+                <h3>John Doe</h3>
+                <p>President</p>
+                <p>John is a dedicated leader with a passion for student welfare and community building.</p>
+            </div>
+            <div class="officer">
+                <img src="officer2.jpg" alt="Officer 2">
+                <h3>Jane Smith</h3>
+                <p>Vice President</p>
+                <p>Jane is known for her problem-solving skills and dedication to academic excellence.</p>
+            </div>
+            <div class="officer">
+                <img src="officer3.jpg" alt="Officer 3">
+                <h3>Mike Johnson</h3>
+                <p>Secretary</p>
+                <p>Mike ensures smooth operations within the council and manages official documentation.</p>
+            </div>
+            <div class="officer">
+                <img src="officer4.jpg" alt="Officer 4">
+                <h3>Emily Davis</h3>
+                <p>Treasurer</p>
+                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
+            </div>
+            <div class="officer">
+                <img src="officer4.jpg" alt="Officer 4">
+                <h3>Emily Davis</h3>
+                <p>Treasurer</p>
+                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
+            </div>
+            <div class="officer">
+                <img src="officer4.jpg" alt="Officer 4">
+                <h3>Emily Davis</h3>
+                <p>Treasurer</p>
+                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
+            </div>
+            <div class="officer">
+                <img src="officer4.jpg" alt="Officer 4">
+                <h3>Emily Davis</h3>
+                <p>Treasurer</p>
+                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
+            </div>
+            <div class="officer">
+                <img src="officer4.jpg" alt="Officer 4">
+                <h3>Emily Davis</h3>
+                <p>Treasurer</p>
+                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
+            </div>
+            <div class="officer">
+                <img src="officer4.jpg" alt="Officer 4">
+                <h3>Emily Davis</h3>
+                <p>Treasurer</p>
+                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
+            </div>
+            <div class="officer">
+                <img src="officer4.jpg" alt="Officer 4">
+                <h3>Emily Davis</h3>
+                <p>Treasurer</p>
+                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
+            </div>
+            
+        </div>
     </section>
 
     <!-- Services Section -->
@@ -298,8 +457,8 @@
             </a>
             <a href="sports_materials.html" class="box">
                 <div class="box-content">
-                    <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/462537598_1059947298955900_4448114609466627873_n.jpg" alt="Sports Materials">
-                    <p>Sports Materials</p>
+                    <img src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.15752-9/463235819_663664939199820_6833333702980431597_n.jpg" alt="Sports Materials Rental">
+                    <p>Sports Materials Rental</p>
                 </div>
             </a>
             <a href="school_supplies.html" class="box">
@@ -310,8 +469,8 @@
             </a>
         </div>
     </section>
-    
-    
+        </div>
+    </section>
     <!-- Feedback Section -->
     <style>
         .feedback-form {
@@ -378,55 +537,6 @@
                 background-color: #3fb8f0;
                 transform: translateY(-3px);
             }
-
-            /* General Styles with CSS Variables */
-            :root {
-                --background-color: #ffffff;
-                --text-color: #333333;
-                --primary-color: #2f82e7;
-                --navbar-bg: rgba(0, 0, 0, 0.8);
-                --box-bg: #26ace1;
-                --button-bg: #2f82e7;
-                --button-hover-bg: #3fb8f0;
-            }
-
-            body {
-                background-color: var(--background-color);
-                color: var(--text-color);
-                transition: background-color 0.3s, color 0.3s;
-            }
-
-            /* Dark Mode Styles */
-            body.dark-mode {
-                --background-color: #121212;
-                --text-color: #f0f0f0;
-                --primary-color: #00aaff;
-                --navbar-bg: rgba(0, 0, 0, 0.95);
-                --box-bg: #333333;
-                --button-bg: #444444;
-                --button-hover-bg: #555555;
-            }
-
-            /* Update existing CSS styles to use variables */
-            .navbar {
-                background: var(--navbar-bg);
-            }
-
-            .box {
-                background-color: var(--box-bg);
-            }
-
-            .cta-button,
-            .feedback-form button,
-            #backToTop {
-                background-color: var(--button-bg);
-            }
-
-            .cta-button:hover,
-            .feedback-form button:hover,
-            #backToTop:hover {
-                background-color: var(--button-hover-bg);
-            }
         </style>
         
         <section class="feedback-section" id="feedback">
@@ -453,10 +563,14 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 ACICSTANCE CORNER. All rights reserved.</p>
+        <div style="margin-top: 20px;">
+            <a href="https://facebook.com" target="_blank" style="margin: 0 10px; color: #fff;">Facebook</a>
+            <a href="https://twitter.com" target="_blank" style="margin: 0 10px; color: #fff;">Twitter</a>
+            <a href="https://instagram.com" target="_blank" style="margin: 0 10px; color: #fff;">Instagram</a>
+        </div>
     </footer>
 
     <script>
-        
         // Smooth scroll to top
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -508,30 +622,6 @@
             stars.forEach(star => star.classList.remove('selected'));
         }
     </script>
-
-<script>
-    // Dark Mode Toggle
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
-
-    // Check localStorage for user preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        body.classList.add('dark-mode');
-    }
-
-    // Toggle dark mode on button click
-    darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-
-        // Save user preference in localStorage
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('dark-mode', 'enabled');
-        } else {
-            localStorage.setItem('dark-mode', 'disabled');
-        }
-    });
-</script>
-
 </body>
 
 </html>
