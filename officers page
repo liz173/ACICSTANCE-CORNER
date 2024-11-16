@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Officers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .officers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .officer-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .officer-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .officer-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .officer-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+        }
+
+        .officer-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Meet Our Officers</h1>
+    <p>Get to know the dedicated team leading our student organization!</p>
+</header>
+
+<main>
+    <div class="officers-container">
+        <!-- Officer Cards -->
+        <div class="officer-card">
+            <img src="officer1.jpg" alt="Officer 1">
+            <h3>John Doe</h3>
+            <p>Adviser</p>
+        </div>
+        <div class="officer-card">
+            <img src="officer2.jpg" alt="Officer 2">
+            <h3>Jane Smith</h3>
+            <p>President</p>
+        </div>
+        <div class="officer-card">
+            <img src="officer3.jpg" alt="Officer 3">
+            <h3>Mark Taylor</h3>
+            <p>Vice President</p>
+        </div>
+        <!-- Repeat the officer cards to make up 32 officers -->
+        <!-- Placeholder officers -->
+        <div class="officer-card">
+            <img src="placeholder.jpg" alt="Officer 4">
+            <h3>Officer 4</h3>
+            <p>Secretary</p>
+        </div>
+        <div class="officer-card">
+            <img src="placeholder.jpg" alt="Officer 5">
+            <h3>Officer 5</h3>
+            <p>Treasurer</p>
+        </div>
+        <div class="officer-card">
+            <img src="placeholder.jpg" alt="Officer 6">
+            <h3>Officer 6</h3>
+            <p>PRO</p>
+        </div>
+        <!-- Duplicate the following code as needed for 32 officers -->
+        ${Array.from({ length: 26 }).map(
+          (_, i) => `
+          <div class="officer-card">
+              <img src="placeholder.jpg" alt="Officer ${i + 7}">
+              <h3>Officer ${i + 7}</h3>
+              <p>Role ${i + 7}</p>
+          </div>`
+        ).join("")}
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 CICS Student Organization. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
