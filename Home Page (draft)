@@ -379,67 +379,13 @@
 
     <!-- Officers Section -->
     <section id="officers" class="officers">
-        <h2>Meet Our Officers</h2>
+        <h2>CICS STUDENT ORGANIZATION ADVISER</h2>
         <div class="officer-container">
             <div class="officer">
                 <img src="officer1.jpg" alt="Officer 1">
                 <h3>John Doe</h3>
-                <p>President</p>
+                <p>Adviser</p>
                 <p>John is a dedicated leader with a passion for student welfare and community building.</p>
-            </div>
-            <div class="officer">
-                <img src="officer2.jpg" alt="Officer 2">
-                <h3>Jane Smith</h3>
-                <p>Vice President</p>
-                <p>Jane is known for her problem-solving skills and dedication to academic excellence.</p>
-            </div>
-            <div class="officer">
-                <img src="officer3.jpg" alt="Officer 3">
-                <h3>Mike Johnson</h3>
-                <p>Secretary</p>
-                <p>Mike ensures smooth operations within the council and manages official documentation.</p>
-            </div>
-            <div class="officer">
-                <img src="officer4.jpg" alt="Officer 4">
-                <h3>Emily Davis</h3>
-                <p>Treasurer</p>
-                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
-            </div>
-            <div class="officer">
-                <img src="officer4.jpg" alt="Officer 4">
-                <h3>Emily Davis</h3>
-                <p>Treasurer</p>
-                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
-            </div>
-            <div class="officer">
-                <img src="officer4.jpg" alt="Officer 4">
-                <h3>Emily Davis</h3>
-                <p>Treasurer</p>
-                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
-            </div>
-            <div class="officer">
-                <img src="officer4.jpg" alt="Officer 4">
-                <h3>Emily Davis</h3>
-                <p>Treasurer</p>
-                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
-            </div>
-            <div class="officer">
-                <img src="officer4.jpg" alt="Officer 4">
-                <h3>Emily Davis</h3>
-                <p>Treasurer</p>
-                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
-            </div>
-            <div class="officer">
-                <img src="officer4.jpg" alt="Officer 4">
-                <h3>Emily Davis</h3>
-                <p>Treasurer</p>
-                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
-            </div>
-            <div class="officer">
-                <img src="officer4.jpg" alt="Officer 4">
-                <h3>Emily Davis</h3>
-                <p>Treasurer</p>
-                <p>Emily is responsible for budgeting, finances, and resource management for all events.</p>
             </div>
             
         </div>
@@ -449,13 +395,13 @@
     <section id="subjects" class="subjects">
         <h2 class="heading">Our Services</h2>
         <div class="box-container">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW5lonyVf9TYHe_E9mMslsH6Nb8_axAWptGcb0brlzGTk7ag/viewform" class="box">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScGTDdtT4tVdsZrnuftdkFVaiy6-wq1am7tW5pof9eHYcT_rw/viewform" class="box">
                 <div class="box-content">
                     <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.15752-9/463199147_1257441035381315_3198867836608332682_n.jpg" alt="Printing Services">
                     <p>Printing Services</p>
                 </div>
             </a>
-            <a href="sports_materials.html" class="box">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXnyscZNdmXqOuL7C6zJqR5LdsJtzFEOepK2Tnq5OwdYHKCg/viewform" class="box">
                 <div class="box-content">
                     <img src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.15752-9/463235819_663664939199820_6833333702980431597_n.jpg" alt="Sports Materials Rental">
                     <p>Sports Materials Rental</p>
