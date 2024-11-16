@@ -433,9 +433,11 @@
         </div>
         <!-- Meet Our Officers Button -->
         <div class="button-container">
-            <button onclick="redirectToOfficersPage()">MEET OUR OFFICERS</button>
+            <a href="file:///C:/Users/Lindley%20Macalindol/Desktop/Ate's%20Code/ACICSTANCE-CORNER-main/Officers%20Page.html" class="cta-button">MEET OUR OFFICERS</a>
+
         </div>
-    </section>    
+    </section>  
+      
 
     <!-- Services Section -->
     <section id="subjects" class="subjects">
