@@ -271,7 +271,8 @@
             <a href="#about">About</a>
             <a href="#subjects">Services</a>
             <a href="#feedback">Feedback</a>
-            <a href="#contact">Contact</a>
+            <!-- Dark Mode Toggle Button -->
+        <button id="darkModeToggle" class="toggle-btn">🌙</button>
         </div>
     </div>
 
@@ -377,6 +378,55 @@
                 background-color: #3fb8f0;
                 transform: translateY(-3px);
             }
+
+            /* General Styles with CSS Variables */
+            :root {
+                --background-color: #ffffff;
+                --text-color: #333333;
+                --primary-color: #2f82e7;
+                --navbar-bg: rgba(0, 0, 0, 0.8);
+                --box-bg: #26ace1;
+                --button-bg: #2f82e7;
+                --button-hover-bg: #3fb8f0;
+            }
+
+            body {
+                background-color: var(--background-color);
+                color: var(--text-color);
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            /* Dark Mode Styles */
+            body.dark-mode {
+                --background-color: #121212;
+                --text-color: #f0f0f0;
+                --primary-color: #00aaff;
+                --navbar-bg: rgba(0, 0, 0, 0.95);
+                --box-bg: #333333;
+                --button-bg: #444444;
+                --button-hover-bg: #555555;
+            }
+
+            /* Update existing CSS styles to use variables */
+            .navbar {
+                background: var(--navbar-bg);
+            }
+
+            .box {
+                background-color: var(--box-bg);
+            }
+
+            .cta-button,
+            .feedback-form button,
+            #backToTop {
+                background-color: var(--button-bg);
+            }
+
+            .cta-button:hover,
+            .feedback-form button:hover,
+            #backToTop:hover {
+                background-color: var(--button-hover-bg);
+            }
         </style>
         
         <section class="feedback-section" id="feedback">
@@ -403,14 +453,10 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 ACICSTANCE CORNER. All rights reserved.</p>
-        <div style="margin-top: 20px;">
-            <a href="https://facebook.com" target="_blank" style="margin: 0 10px; color: #fff;">Facebook</a>
-            <a href="https://twitter.com" target="_blank" style="margin: 0 10px; color: #fff;">Twitter</a>
-            <a href="https://instagram.com" target="_blank" style="margin: 0 10px; color: #fff;">Instagram</a>
-        </div>
     </footer>
 
     <script>
+        
         // Smooth scroll to top
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -462,6 +508,30 @@
             stars.forEach(star => star.classList.remove('selected'));
         }
     </script>
+
+<script>
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Check localStorage for user preference
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    // Toggle dark mode on button click
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Save user preference in localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+</script>
+
 </body>
 
 </html>
