@@ -1,0 +1,86 @@
+<!-- officers.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Officers</title>
+    <style>
+        /* Include your styles for this page or link to an external CSS file */
+        body {
+            background: linear-gradient(135deg, #4d99d3, #dedeeddc);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .officer-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .officer {
+            background-color: #26ace1;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 300px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .officer img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .officer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .officer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Meet Our Officers</h1>
+        <div class="officer-container">
+            <!-- Officer 1 -->
+            <div class="officer">
+                <img src="officer1.jpg" alt="Officer 1">
+                <h3>John Doe</h3>
+                <p>Position: Adviser</p>
+                <p>John is a dedicated leader with a passion for student welfare and community building.</p>
+            </div>
+            <!-- Officer 2 -->
+            <div class="officer">
+                <img src="officer2.jpg" alt="Officer 2">
+                <h3>Jane Smith</h3>
+                <p>Position: President</p>
+                <p>Jane is known for her excellent organizational skills and commitment to the council's mission.</p>
+            </div>
+            <!-- Add more officers as needed -->
+        </div>
+    </div>
+</body>
+
+</html>
