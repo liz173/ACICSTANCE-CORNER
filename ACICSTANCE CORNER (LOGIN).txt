@@ -344,20 +344,24 @@
         });
 
         document.getElementById('registerForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.getElementById('reg-email').value;
-            const password = document.getElementById('reg-password').value;
+        event.preventDefault();
+        const email = document.getElementById('reg-email').value;
+        const password = document.getElementById('reg-password').value;
 
-            if (email && password) {
-                registeredEmail = email;
-                registeredPassword = password;
-                alert('Registration successful');
-                registerForm.classList.remove('active');
-                loginForm.classList.add('active');
-            } else {
-                document.getElementById('register-error-message').textContent = 'All fields are required';
-            }
-        });
+        if (email && password) {
+        registeredEmail = email;
+        registeredPassword = password;
+        alert('Registration successful');
+        
+        // Remove or hide the wrapper after successful registration
+        wrapper.style.display = 'none'; // Hides the wrapper
+        // Alternatively, to completely remove it from the DOM, use:
+        // wrapper.remove();
+        } else {
+        document.getElementById('register-error-message').textContent = 'All fields are required';
+    }
+});
+
 
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
