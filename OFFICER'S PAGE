@@ -78,9 +78,137 @@
                 <p>Position: President</p>
                 <p>Jane is known for her excellent organizational skills and commitment to the council's mission.</p>
             </div>
-            <!-- Add more officers as needed -->
+            <!-- Officer 3 -->
+            <div class="officer">
+                <img src="officer3.jpg" alt="Officer 3">
+                <h3>Robert Johnson</h3>
+                <p>Position: Vice President</p>
+                <p>Robert ensures smooth operations and supports the council's initiatives.</p>
+            </div>
+            <!-- Officer 4 -->
+            <div class="officer">
+                <img src="officer4.jpg" alt="Officer 4">
+                <h3>Emily Davis</h3>
+                <p>Position: Secretary</p>
+                <p>Emily manages communications and keeps everyone informed.</p>
+            </div>
+            <!-- Officer 5 -->
+            <div class="officer">
+                <img src="officer5.jpg" alt="Officer 5">
+                <h3>Michael Wilson</h3>
+                <p>Position: Treasurer</p>
+                <p>Michael oversees the budget and ensures financial stability.</p>
+            </div>
+            <!-- Officer 6 -->
+            <div class="officer">
+                <img src="officer6.jpg" alt="Officer 6">
+                <h3>Sarah Brown</h3>
+                <p>Position: PRO</p>
+                <p>Sarah handles public relations and event promotions.</p>
+            </div>
+            <!-- Officer 7 -->
+            <div class="officer">
+                <img src="officer7.jpg" alt="Officer 7">
+                <h3>David Taylor</h3>
+                <p>Position: Member</p>
+                <p>David contributes innovative ideas to council projects.</p>
+            </div>
+            <!-- Officer 8 -->
+            <div class="officer">
+                <img src="officer8.jpg" alt="Officer 8">
+                <h3>Olivia Moore</h3>
+                <p>Position: Member</p>
+                <p>Olivia actively participates in planning and organizing events.</p>
+            </div>
+            <!-- Officer 9 -->
+            <div class="officer">
+                <img src="officer9.jpg" alt="Officer 9">
+                <h3>Daniel Anderson</h3>
+                <p>Position: Member</p>
+                <p>Daniel is a driving force behind volunteer engagement.</p>
+            </div>
+            <!-- Officer 10 -->
+            <div class="officer">
+                <img src="officer10.jpg" alt="Officer 10">
+                <h3>Sophia Thomas</h3>
+                <p>Position: Member</p>
+                <p>Sophia specializes in creative event planning.</p>
+            </div>
+            <!-- Officer 11 -->
+            <div class="officer">
+                <img src="officer11.jpg" alt="Officer 11">
+                <h3>James Jackson</h3>
+                <p>Position: Member</p>
+                <p>James coordinates logistics for council activities.</p>
+            </div>
+            <!-- Officer 12 -->
+            <div class="officer">
+                <img src="officer12.jpg" alt="Officer 12">
+                <h3>Isabella Martinez</h3>
+                <p>Position: Member</p>
+                <p>Isabella is a passionate advocate for community service.</p>
+            </div>
+            <!-- Officer 13 -->
+            <div class="officer">
+                <img src="officer13.jpg" alt="Officer 13">
+                <h3>Matthew White</h3>
+                <p>Position: Member</p>
+                <p>Matthew excels in mentorship and guidance.</p>
+            </div>
+            <!-- Officer 14 -->
+            <div class="officer">
+                <img src="officer14.jpg" alt="Officer 14">
+                <h3>Charlotte Harris</h3>
+                <p>Position: Member</p>
+                <p>Charlotte is a creative force in team collaborations.</p>
+            </div>
+            <!-- Officer 15 -->
+            <div class="officer">
+                <img src="officer15.jpg" alt="Officer 15">
+                <h3>Anthony Clark</h3>
+                <p>Position: Member</p>
+                <p>Anthony ensures every event runs smoothly.</p>
+            </div>
+            <!-- Officer 16 -->
+            <div class="officer">
+                <img src="officer16.jpg" alt="Officer 16">
+                <h3>Amelia Lewis</h3>
+                <p>Position: Member</p>
+                <p>Amelia is dedicated to fostering inclusivity.</p>
+            </div>
+            <!-- Officer 17 -->
+            <div class="officer">
+                <img src="officer17.jpg" alt="Officer 17">
+                <h3>Ethan Robinson</h3>
+                <p>Position: Member</p>
+                <p>Ethan is a technology enthusiast aiding council tasks.</p>
+            </div>
+            <!-- Officer 18 -->
+            <div class="officer">
+                <img src="officer18.jpg" alt="Officer 18">
+                <h3>Ava Hall</h3>
+                <p>Position: Member</p>
+                <p>Ava is known for her attention to detail in planning.</p>
+            </div>
+            <!-- Officer 19 -->
+            <div class="officer">
+                <img src="officer19.jpg" alt="Officer 19">
+                <h3>Alexander Young</h3>
+                <p>Position: Member</p>
+                <p>Alexander brings energy and enthusiasm to the team.</p>
+            </div>
+            <!-- Officer 20 -->
+            <div class="officer">
+                <img src="officer20.jpg" alt="Officer 20">
+                <h3>Mia King</h3>
+                <p>Position: Member</p>
+                <p>Mia is a key contributor to outreach programs.</p>
+            </div>
+            <!-- Officer 21-31 -->
+            <!-- Repeat similar blocks for Officers 21 to 31, changing details as needed -->
         </div>
     </div>
 </body>
+
 
 </html>
